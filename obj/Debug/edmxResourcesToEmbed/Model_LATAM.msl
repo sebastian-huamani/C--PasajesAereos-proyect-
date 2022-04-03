@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_LATAM_ModelStoreContainer" CdmEntityContainer="BD_LATAM_Entities">
+    <EntitySetMapping Name="AsientoAvion">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.AsientoAvion">
+        <MappingFragment StoreEntitySet="AsientoAvion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdAvion" ColumnName="IdAvion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Avion">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.Avion">
+        <MappingFragment StoreEntitySet="Avion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciudad">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.Ciudad">
+        <MappingFragment StoreEntitySet="Ciudad">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pasaje">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.Pasaje">
+        <MappingFragment StoreEntitySet="Pasaje">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdVuelo" ColumnName="IdVuelo" />
+          <ScalarProperty Name="IdPasajero" ColumnName="IdPasajero" />
+          <ScalarProperty Name="IdAsientoAvion" ColumnName="IdAsientoAvion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdVendedor" ColumnName="IdVendedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pasajero">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.Pasajero">
+        <MappingFragment StoreEntitySet="Pasajero">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarifa">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.Tarifa">
+        <MappingFragment StoreEntitySet="Tarifa">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCiudadOrigen" ColumnName="IdCiudadOrigen" />
+          <ScalarProperty Name="IdCiudadDestino" ColumnName="IdCiudadDestino" />
+          <ScalarProperty Name="IdTipoServicio" ColumnName="IdTipoServicio" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoServicio">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.TipoServicio">
+        <MappingFragment StoreEntitySet="TipoServicio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendedor">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.Vendedor">
+        <MappingFragment StoreEntitySet="Vendedor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vuelo">
+      <EntityTypeMapping TypeName="BD_LATAM_Model.Vuelo">
+        <MappingFragment StoreEntitySet="Vuelo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdTarifa" ColumnName="IdTarifa" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="IdAvion" ColumnName="IdAvion" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SPLATAM_DEL_VENDEDOR" FunctionName="BD_LATAM_Model.Store.SPLATAM_DEL_VENDEDOR" />
+    <FunctionImportMapping FunctionImportName="SPLATAM_INS_VENDEDOR" FunctionName="BD_LATAM_Model.Store.SPLATAM_INS_VENDEDOR" />
+    <FunctionImportMapping FunctionImportName="SPLATAM_SEL_VENDEDOR" FunctionName="BD_LATAM_Model.Store.SPLATAM_SEL_VENDEDOR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_LATAM_Model.SPLATAM_SEL_VENDEDOR_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Dni" ColumnName="Dni" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPLATAM_UPD_VENDEDOR" FunctionName="BD_LATAM_Model.Store.SPLATAM_UPD_VENDEDOR" />
+  </EntityContainerMapping>
+</Mapping>

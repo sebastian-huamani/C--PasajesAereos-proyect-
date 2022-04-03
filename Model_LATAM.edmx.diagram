@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f5c331b0af04144b84a6f9a4061e119" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_LATAM_Model.AsientoAvion" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.Avion" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.Ciudad" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.Pasaje" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.Pasajero" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.Tarifa" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.TipoServicio" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.Vendedor" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_LATAM_Model.Vuelo" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_AsientoAvion_Avion" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Pasaje_AsientoAvion" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Vuelo_Avion" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Tarifa_Ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Tarifa_Ciudad1" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Pasaje_Pasajero1" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Pasaje_Vendedor" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Pasaje_Vuelo" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Tarifa_TipoServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_LATAM_Model.FK_Vuelo_Tarifa" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
